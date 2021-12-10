@@ -1,0 +1,150 @@
+/* -- Header -- */
+
+.home{
+    color: rgb(255, 255, 255);
+    padding-left: 25px;
+}
+
+.home a {
+    text-decoration: none;
+}
+
+.name{
+    font-family: 'Lobster', cursive;
+    margin-bottom: 0;
+    margin-top: 7px;
+
+}
+
+.underName{
+    font-family: 'Satisfy', cursive;
+    padding-left: 25px;
+    margin: 0;
+
+}
+
+ul{
+    padding: 20px 0 0 0;
+}
+
+a{
+    color:#ffffff !important;
+    text-decoration:none;
+}
+.CallendarContainer{
+    padding-top: 150px;
+}
+
+.wholecallendar{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.wholecallendar>#addmonth{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+#calendar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.weekDay{
+    padding: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.weekDay>div{
+    padding:20px;
+    text-align: center;
+}
+
+.weekDay>div:hover{
+    background-color: rgb(141, 141, 141);
+}
+
+#previousMonth , #nextMonth , #nameHolder{
+    display: inline-block;
+}
+
+#previousMonth , #nextMonth{
+    padding: 40px
+}
+
+/* pop up box and blur under it */
+
+#blur.active,
+#blurFooter.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Shadow for popup box taken from https://getcssscan.com/css-box-shadow-examples */
+#popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+
+#popup.active{
+    opacity: 1;
+    visibility: visible;   
+    top: 50%;
+
+}
+.popUpHeading{
+    display: flex;
+    justify-content: space-between;
+}
+.popUpHeading>*{
+    display: inline;
+}
+
+#errorDisplay{
+    color: rgb(179, 41, 41);
+}
+
+/* small screen sizes */ 
+@media (max-width:769px)  { 
+
+    .weekDay{
+        padding: 0;
+    }
+    .weekDay>div{
+        padding: 25px;
+    }
+    .wholecallendar {
+        width: 100%;
+    }
+}
+
+@media (max-width:570px) { 
+
+    .weekDay>div{
+        padding: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width:411px) { 
+
+    #previousMonth, #nextMonth, #currentMonthName{
+        padding: 0;
+    }
+}
+
+footer{
+    padding-top: 10rem !important;
+}

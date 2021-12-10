@@ -1,0 +1,91 @@
+/* -- Header -- */
+.home{
+    color: rgb(255, 255, 255);
+    padding-left: 25px;
+}
+
+.name{
+    font-family: 'Lobster', cursive;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+.underName{
+    font-family: 'Satisfy', cursive;
+    padding-left: 25px;
+    margin: 0;
+}
+
+ul{
+    padding: 20px 0 0 0;
+}
+
+a{
+    color:#ffffff !important;
+    text-decoration:none;
+}
+
+/* -- Content -- */ 
+
+/* -- Video Carusel -- */ 
+
+#carouselContainer{
+    margin-top: 100px;
+}
+
+.hide{
+    display: none;
+}
+
+.arrow{
+    position: relative;
+    z-index: 1;
+}
+
+#leftArrow{
+    top: 50%;
+    margin-left: 50px;
+    float: left;
+}
+#rightArrow{
+    float: right;
+    margin-right: 50px;
+    top: 50%;
+}
+
+.caption{
+    position: relative;
+    color: black;
+    top: 20px;
+    margin-left: 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgb(201, 201, 201);
+}
+    /* -- Photo Gallery -- */ 
+#galleryContainer{
+    margin-top: 35px;
+    padding-top: 35px;
+    background-color: rgb(255, 255, 255);
+}
+.gallery {
+	display: flex;
+	padding: 2px;
+	transition: .3s;
+}
+
+.gallery_colmn {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#column1 > img,
+#column2 > img,
+#column3 > img,
+#column4 > img{
+    border: 5px rgb(255, 255, 255) solid;
+}
+
+img:not(*:hover){
+    filter: grayscale(1);
+}
